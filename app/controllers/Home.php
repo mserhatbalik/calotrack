@@ -10,13 +10,14 @@ class Home extends Controller
 
   public function index()
   {
-    $data = ['title' => 'Universe'];
+    $data = ['title' => 'Home Page'];
 
     $this->view('home/index', $data);
   }
 
   public function about()
   {
-    $this->view('home/about');
+    $data = ['title' => 'About Us'];
+    $this->view('home/about', $data);
   }
 }
