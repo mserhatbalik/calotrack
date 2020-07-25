@@ -1,9 +1,9 @@
 <?php
 
-/*
-  Load the Libraries
-*/
+// Load Config
+require_once '../app/config/config.php';
 
-require_once 'libraries/Core.php';
-require_once 'libraries/Controller.php';
-require_once 'libraries/Database.php';
+// Autoload Libraries
+spl_autoload_register(function ($libraryFileName) {
+  require_once '../app/libraries/' . $libraryFileName . '.php';
+});
