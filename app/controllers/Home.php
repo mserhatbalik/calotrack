@@ -1,6 +1,6 @@
 <?php
 
-class Home
+class Home extends Controller
 {
 
   public function __construct()
@@ -10,10 +10,13 @@ class Home
 
   public function index()
   {
+    $data = ['title' => 'Universe'];
+
+    $this->view('home/index', $data);
   }
 
-  public function about($id)
+  public function about()
   {
-    echo "about is loaded. id is ->" . $id;
+    $this->view('home/about');
   }
 }
